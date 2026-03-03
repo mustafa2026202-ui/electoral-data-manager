@@ -1,12 +1,8 @@
-import sys
-from PyQt5.QtWidgets import QApplication
-from ui.main_window import MainWindow
-
-def main():
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+import tkinter as tk
+from ui.main_window import ElectoralDataManager
 
 if __name__ == '__main__':
-    main()
+    root = tk.Tk()
+    root.geometry('1200x700')
+    app = ElectoralDataManager(root)
+    root.mainloop()
